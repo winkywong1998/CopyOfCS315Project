@@ -1,0 +1,59 @@
+Project02 Grading
+
+Have student create a tmp dir on their RPi.
+
+Clone project into tmp dir.
+
+Compile nt.c.
+
+Have each student do all the examples from the Project02 web page.
+
+Then do the following
+
+$ ./nt 0
+$ ./nt 1
+$ ./nt 2
+$ ./nt -1
+$ ./nt -2
+$ ./nt 4294967295
+$ ./nt 4294967296
+$ ./nt 429496729600
+$ ./nt 2147483647
+$ ./nt -2147483648
+$ ./nt -2147483649
+
+$ ./nt 713
+
+Feed the binary output of this as input to nt
+Feed the hex output of this as intput to nt
+
+Check results
+
+$ ./nt -713
+
+Feed the binary output of this as input to nt
+Feed the hex output of this as intput to nt
+
+Then using the hex for 713 (0x000002C9) do this:
+
+$ ./nt -b 4 -r 0,3 0x000002C9
+
+Check results.
+
+$ ./nt -b 8 -r 0,7 0x000002C9
+
+(base 10 signed should be negative)
+
+$ ./nt -b 4 -r 4,7 0x000002C9
+
+(base 10 signed should be negative)
+
+$ ./nt
+(You should see a usage message)
+
+Look over code in Github.
+
+Have student explain any data structure (struct).
+Explain main.
+Explain one of the conversion functions of your choice.
+
